@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.27'
+version = '1.28'
 
 setup(name='collective.mediaShow',
       version=version,
@@ -15,9 +15,10 @@ setup(name='collective.mediaShow',
         "Programming Language :: Python",
         ],
       keywords='slideshow media video audio mediashow',
-      author='David Jonas',
-      author_email='david@intk.com',
-      url='http://svn.plone.org/svn/collective/',
+      author='David Jonas, Andre Goncalves',
+      author_email='david@intk.com, andre@intk.com',
+      url='https://github.com/intk/collective.mediaShow',
+      download_url='https://github.com/intk/collective.mediaShow/tarball/1.28'
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['collective'],
