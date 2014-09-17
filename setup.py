@@ -18,7 +18,7 @@ setup(name='collective.mediaShow',
       author='David Jonas, Andre Goncalves',
       author_email='david@intk.com, andre@intk.com',
       url='https://github.com/intk/collective.mediaShow',
-      download_url='https://github.com/intk/collective.mediaShow/tarball/1.28'
+      download_url='https://github.com/intk/collective.mediaShow/tarball/1.28',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['collective'],
