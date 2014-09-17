@@ -44,6 +44,16 @@
          template="mediaShowListing.pt"
          permission="zope2.View"
     />
+
+    <!-- Viewlets -->
+    <browser:viewlet
+      name="collective.mediaShow.slideshowViewlet"
+      manager="plone.app.layout.viewlets.interfaces.IAboveContentBody"
+      layer=".interfaces.IThemeSpecific"
+      class=".views.SlideshowView"
+      template="templates/slideshow.pt"
+      permission="zope2.View"
+    />
     
     <!-- Zope 3 browser resources -->
     

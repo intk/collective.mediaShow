@@ -4,4 +4,8 @@ when this product is installed. -->
 <layers>
     <layer name="collective.mediaShow.layer" 
            interface="collective.mediaShow.browser.interfaces.IMediaShowSpecific" />
+    <layer 
+        name="collective.mediaShow" 
+        interface="collective.mediaShow.browser.interfaces.IThemeSpecific" 
+    /> 
 </layers>

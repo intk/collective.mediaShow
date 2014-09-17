@@ -6,3 +6,7 @@ from zope.interface import implements, Interface
 class IMediaShowSpecific(IDefaultPloneLayer):
     """Marker interface that defines a Zope 3 browser layer.
     """
+
+class IThemeSpecific(Interface):
+    """Marker interface that defines a Zope 3 browser layer.
+    """
