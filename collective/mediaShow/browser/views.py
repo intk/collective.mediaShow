@@ -19,3 +19,14 @@ class SlideshowView(ViewletBase):
         """%parentURL
         
         return structure
+    
+    def slideshowInContext(self, parent, request):
+        inContext = False
+        if 'folder_contents' in request:
+            return inContext
+        try:
+            inContext = 'slideshow' in parent
+            return inContext
+        except:
+            return inContext
+

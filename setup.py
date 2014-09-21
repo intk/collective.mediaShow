@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.28'
+version = '1.29'
 
 setup(name='collective.mediaShow',
       version=version,
@@ -18,7 +18,7 @@ setup(name='collective.mediaShow',
       author='David Jonas, Andre Goncalves',
       author_email='david@intk.com, andre@intk.com',
       url='https://github.com/intk/collective.mediaShow',
-      download_url='https://github.com/intk/collective.mediaShow/tarball/1.28',
+      download_url='https://github.com/intk/collective.mediaShow/tarball/1.29',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['collective'],

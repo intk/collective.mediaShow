@@ -2,7 +2,7 @@
     id="slideshow"
     i18n:domain="collective.mediaShow">
     <tal:checkForSlideshowFolder condition="exists: context/slideshow">
-          <tal:slideshow replace="structure python:view.slideshow(context['slideshow'])" tal:condition="python:'slideshow' in context">
+          <tal:slideshow replace="structure python:view.slideshow(context['slideshow'])" tal:condition="python:view.slideshowInContext(context, request.URL)">
          </tal:slideshow>           
     </tal:checkForSlideshowFolder>
 </div>
