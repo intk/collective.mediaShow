@@ -72,7 +72,7 @@ class GetMediaShowItemView(BrowserView):
         if item.portal_type == 'Image':
             return item.absolute_url() + '/image_large'
         
-        if item.portal_type == 'Link' and (item.remoteUrl.find("youtube.com") > -1 or item.remoteUrl.find("vimeo.com") > -1):
+        if (item.portal_type == 'Link' or item.portal_type == "MediaLink") and (item.remoteUrl.find("youtube.com") > -1 or item.remoteUrl.find("vimeo.com") > -1):
             return item.remoteUrl
         
         catalog = getToolByName(self.context, 'portal_catalog')
@@ -101,18 +101,18 @@ class GetMediaShowItemView(BrowserView):
         try:
             if(self.isVideo(item)):
                 return "Video"
-            elif item.portal_type == 'Link' and item.remoteUrl.find("youtube.com") > -1:
+            elif (item.portal_type == 'Link' or item.portal_type == "MediaLink") and item.remoteUrl.find("youtube.com") > -1:
                 return "Youtube"
-            elif item.portal_type == 'Link' and item.remoteUrl.find("vimeo.com") > -1:
+            elif (item.portal_type == 'Link' or item.portal_type == "MediaLink") and item.remoteUrl.find("vimeo.com") > -1:
                 return "Vimeo"
             else:
                 return "Image"
         except:
             if(self.isVideo(item)):
                 return "Video"
-            elif item.portal_type == 'Link' and item.getObject().remoteUrl.find("youtube.com") > -1:
+            elif (item.portal_type == 'Link' or item.portal_type == "MediaLink") and item.getObject().remoteUrl.find("youtube.com") > -1:
                 return "Youtube"
-            elif item.portal_type == 'Link' and item.getObject().remoteUrl.find("vimeo.com") > -1:
+            elif (item.portal_type == 'Link' or item.portal_type == "MediaLink") and item.getObject().remoteUrl.find("vimeo.com") > -1:
                 return "Vimeo"
             else:
                 return "Image"
@@ -175,7 +175,7 @@ class MediaShowListingView(BrowserView):
                 results = catalog.searchResults(Creator = self.request['Creator'], portal_type = 'Object')
         else:
             results = []
-         
+        
         
         resultArray = []
         
@@ -183,7 +183,7 @@ class MediaShowListingView(BrowserView):
         if not recursiveMode:
             for res in results:
                 if self.getMediaURL(res.getObject()) != "" and res.getObject() != self.context:
-                    resultArray.append({"url": res.getURL(), "UID": res["UID"]})
+                    resultArray.append({ "url": res.getURL(), "UID": res["UID"] })
         else:
             for res in results:
                 if self.getMediaURL(res.getObject()) != "" and res.getObject() != self.context and res.portal_type != 'Folder':
@@ -203,7 +203,7 @@ class MediaShowListingView(BrowserView):
         if(self.isVideo(item)):
             return item.absolute_url()
             
-        if item.portal_type == 'Link' and (item.remoteUrl.find("youtube.com") > -1 or item.remoteUrl.find("vimeo.com") > -1):
+        if (item.portal_type == 'Link' or item.portal_type == 'MediaLink') and (item.remoteUrl.find("youtube.com") > -1 or item.remoteUrl.find("vimeo.com") > -1):
             return item.remoteUrl
         
         if item.portal_type == 'Image':
@@ -222,7 +222,7 @@ class MediaShowListingView(BrowserView):
                 leadMedia = results[0]
                 if leadMedia.portal_type == 'Image':
                     return leadMedia.getURL() + '/image_large'
-                elif leadMedia.portal_type == 'Link':
+                elif (leadMedia.portal_type == 'Link' or leadMedia.portal_type == "MediaLink"):
                     try:
                         return leadMedia.remoteUrl
                     except:
