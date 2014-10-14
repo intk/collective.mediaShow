@@ -57,7 +57,7 @@ class SlideshowView(ViewletBase):
             if len(results) > 0:
                 leadMedia = results[0]
                 if leadMedia.portal_type == 'Image':
-                    return leadMedia.getURL() + '/image_slideshow'
+                    return leadMedia.getURL() + '/image_large'
                 else:
                     return leadMedia.getURL()
             else:

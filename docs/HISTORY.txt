@@ -1,6 +1,14 @@
 Changelog
 =========
 
+1.31 (2014-10-10)
+---------------------
+- slideshow aspect ratio fixed [andreg]
+
+1.30 (2014-10-06)
+---------------------
+- slideshow showing leadmedia image [andreg]
+
 1.29 (2014-09-20)
 ---------------------
 - slideshow removed from contents tab [andreg]
