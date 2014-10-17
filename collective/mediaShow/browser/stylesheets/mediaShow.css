@@ -41,7 +41,7 @@ body.mceContentBody .embededMediaShow {
     text-align:right;
 }
 
-.embededMediaShow.javascripted .mediaShowButtons .buttonPrev
+.embededMediaShow.javascripted .mediaShowButtons .buttonPrev, .mediaShowButtons .buttonPrev
 {
     float:left;
     cursor:pointer;
@@ -55,7 +55,7 @@ body.mceContentBody .embededMediaShow {
     text-transform: uppercase;
 }
 
-.embededMediaShow.javascripted .mediaShowButtons .buttonNext
+.embededMediaShow.javascripted .mediaShowButtons .buttonNext, .mediaShowButtons .buttonNext
 {
     float:right;
     cursor:pointer;
@@ -69,7 +69,7 @@ body.mceContentBody .embededMediaShow {
 }
 
 /*============== imageButtons ===========*/
-.embededMediaShow.javascripted .mediaShowButtons .buttonPrev
+.embededMediaShow.javascripted .mediaShowButtons .buttonPrev, .mediaShowButtons .buttonPrev
 {
     padding:0;
     background-color:transparent;
@@ -81,7 +81,7 @@ body.mceContentBody .embededMediaShow {
     background-position: 100px -10px;
 }
 
-.embededMediaShow.javascripted .mediaShowButtons .buttonNext
+.embededMediaShow.javascripted .mediaShowButtons .buttonNext, .mediaShowButtons .buttonNext
 {
     padding:0;
     background-color:transparent;

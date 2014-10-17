@@ -1,7 +1,7 @@
 from setuptools import setup, find_packages
 import os
 
-version = '1.32'
+version = '1.35'
 
 setup(name='collective.mediaShow',
       version=version,

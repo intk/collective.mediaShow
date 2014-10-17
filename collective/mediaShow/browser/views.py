@@ -21,7 +21,7 @@ class SlideshowView(ViewletBase):
         parentURL = parent.absolute_url()
         structure = """
         <div class="embededMediaShow">
-            <a  href="%s?recursive=true">slideshow</a>
+            <a  href="%s?recursive=true"></a>
         </div>
         """%parentURL
         
