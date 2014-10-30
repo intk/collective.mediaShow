@@ -429,8 +429,6 @@ mediaShow.getYoutubeEmbed = function (media)
   
   youtubeId = $.trim(youtubeId);
   
-
-
   var embed = '<iframe id="'+youtubeId+'" width="100%" height="100%" src="http://www.youtube.com/embed/'+youtubeId+'?rel=0&enablejsapi=1" frameborder="0" allowfullscreen></iframe>';
   
   return embed;

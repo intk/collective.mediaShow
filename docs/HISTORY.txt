@@ -1,6 +1,10 @@
 Changelog
 =========
 
+1.36 (2014-10-10)
+---------------------
+- Slick slideshow implementation [andreg]
+
 1.31 (2014-10-10)
 ---------------------
 - slideshow aspect ratio fixed [andreg]

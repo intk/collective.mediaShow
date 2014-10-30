@@ -20,8 +20,8 @@ class SlideshowView(ViewletBase):
         """
         parentURL = parent.absolute_url()
         structure = """
-        <div class="embededMediaShow">
-            <a  href="%s?recursive=true"></a>
+        <div class="slick-slideshow">
+            <a href="%s?recursive=true" id='slide-get-content'></a>    
         </div>
         """%parentURL
         
